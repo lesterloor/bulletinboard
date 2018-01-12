@@ -1,0 +1,10 @@
+head
+  title Post a Message
+  link(rel='stylesheet', href='../styles/main.css')
+body
+  h2 Add your Message
+  form(action='/post', method='POST')
+    input(type='text', placeholder="Enter Title" name='title')
+    br
+    textarea(rows='10',placeholder="Enter Body Message" cols='40', name='bodymessage')
+    button Post
