@@ -1,10 +1,15 @@
 head
-  title Post a Message
-  link(rel='stylesheet', href='../styles/main.css')
+  include head.pug
+
+  
 body
-  h2 Add your Message
-  form(action='/post', method='POST')
-    input(type='text', placeholder="Enter Title" name='title')
-    br
-    textarea(rows='10',placeholder="Enter Body Message" cols='40', name='bodymessage')
-    button Post
+  .container(style="width:60%!important")
+    form.form-signin(action='/post', method='POST')
+      h2.form-signin-heading Post to bulletin
+      label.sr-only(for='inputEmail') Enter Title
+      input#inputEmail.form-control(type='text',name='title', placeholder='Enter Title',)
+      label.sr-only(for='inputText') Enter Body
+      textarea#inputPassword.form-control(type='text',  name='bodymessage', placeholder='Enter Body', )
+    
+      button.btn.btn-lg.btn-primary.btn-block(type='submit') Send Post
+    a.btn.btn-lg.btn-primary(href='/', role='button') Check List

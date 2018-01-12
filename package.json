@@ -21,6 +21,7 @@
     "express": "^4.16.2",
     "express-validator": "^4.3.0",
     "pg": "^7.4.1",
-    "pug": "^2.0.0-rc.4"
+    "pug": "^2.0.0-rc.4",
+    "sequelize": "^4.31.0"
   }
 }

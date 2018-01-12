@@ -1,5 +1,12 @@
-
 head
-title Bulletin App
+  include head.pug
+
 body
-  h3 Bulletin App
+  .container(style="width:60%!important")
+  .jumbotron.mt-3
+    h1 Bulletin App
+    - for (var i = res.length - 1; i >= 0; --i) {
+      h3 Title: #{res[i].title}
+      p.lead Body: #{res[i].body}
+    - }
+    a.btn.btn-lg.btn-primary(href='/addmessage', role='button') Insert message
